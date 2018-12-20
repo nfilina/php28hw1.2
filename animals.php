@@ -116,15 +116,6 @@
     $second[] = $parts[1];
     }
 
-$random_first_word = [];
- 
-    while (count($random_first_word) < count($name_two_words)){   
-   $proverka = $first[rand(0, count($name_two_words)-1)];   
-    if (!in_array($proverka, $random_first_word)) {
-        array_push($random_first_word, $proverka);
-    }
-}
-
 $random_second_word = [];
  
     while (count($random_second_word) < count($name_two_words)){ 
@@ -137,7 +128,7 @@ $random_second_word = [];
 $final_result = [];
  
 for($i = 0; $i < count($name_two_words); $i++){   
-    $final_result[]= $random_first_word[$i] . ' ' . $random_second_word[$i];  
+    $final_result[]= $first[$i] . ' ' . $random_second_word[$i];  
 }
 
 foreach($final_result as $myarr) 
